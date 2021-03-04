@@ -21,7 +21,9 @@ export class HomePage {
     const imc = this.weight / (this.height * this.height);
     if(imc<18.5)this.showMessage(`IMC = ${imc.toFixed(2)}`+" - MAGREZA"); 
     else if (imc <24.9)this.showMessage(`IMC = ${imc.toFixed(2)}`+" - NORMAL");
-    
+    else if (imc <29.9)this.showMessage(`IMC = ${imc.toFixed(2)}`+" - SOBREPESO");
+    else if (imc <39.9)this.showMessage(`IMC = ${imc.toFixed(2)}`+" - OBESIDADE");
+    else this.showMessage(`IMC = ${imc.toFixed(2)}`+" - OBESIDADE GRAVE");
   }
 
   async showMessage(msg: string) {
