@@ -19,7 +19,8 @@ export class HomePage {
 
   onCalculate() {
     const imc = this.weight / (this.height * this.height);
-    this.showMessage(`IMC = ${imc.toFixed(2)}`);
+    if(imc<18.5)this.showMessage(`IMC = ${imc.toFixed(2)}`+" - MAGREZA"); 
+    
   }
 
   async showMessage(msg: string) {
